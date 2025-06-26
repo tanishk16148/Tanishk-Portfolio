@@ -1,0 +1,19 @@
+.navbar-theme-btn {
+  background: transparent;
+  border: 2px solid currentColor;
+  color: #64ffda;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-theme-btn:hover {
+  background-color: #64ffda;
+  color: #121212;
+}
+
+.navbar-theme-btn:active {
+  transform: scale(0.9);
+}

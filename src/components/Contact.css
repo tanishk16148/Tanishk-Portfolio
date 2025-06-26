@@ -1,0 +1,256 @@
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 80vh;
+  color: inherit;
+  background: inherit;
+}
+
+/* Contact Info */
+.contact-info {
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.05);
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  color: var(--accent-color, #64ffda);
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  font-size: 1.05rem;
+  margin: 0.3rem 0;
+  color: inherit;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: var(--accent-color, #64ffda);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #fff;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* About Preview */
+.about-preview {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-open-btn {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color, #64ffda);
+  color: #121212;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-open-btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--accent-color, #64ffda);
+  color: var(--accent-color, #64ffda);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contact-modal {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-color, #64ffda);
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  color: inherit;
+  position: relative;
+  animation: fadeInUp 0.5s ease-out;
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--accent-color, #64ffda);
+  cursor: pointer;
+}
+
+/* Form */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--accent-color, #64ffda);
+  background-color: #1a1a1a;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+.step-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact-btn {
+  padding: 0.75rem;
+  background-color: var(--accent-color, #64ffda);
+  color: #121212;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--accent-color, #64ffda);
+  color: var(--accent-color, #64ffda);
+}
+
+/* Toast */
+.custom-toast {
+  font-size: 1rem;
+  background: #121212 !important;
+  color: var(--accent-color, #64ffda) !important;
+  border-radius: 8px !important;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-modal {
+    padding: 1.5rem;
+  }
+
+  .contact-btn,
+  .modal-close-btn {
+    font-size: 0.95rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Light Theme */
+.App.light {
+  --accent-color: #0077ff;
+}
+
+.App.light .contact-section {
+  background-color: #f0f0f0;
+  color: #121212;
+}
+
+.App.light .about-preview p,
+.App.light .contact-info p {
+  color: #333;
+}
+
+.App.light .modal-form input,
+.App.light .modal-form textarea {
+  background-color: #fff;
+  color: #121212;
+  border: 1px solid #ccc;
+}
+
+.App.light .modal-form input:focus,
+.App.light .modal-form textarea:focus {
+  border-color: var(--accent-color);
+  background-color: #f9f9f9;
+}
+
+.App.light .custom-toast {
+  background: #ffffff !important;
+  color: var(--accent-color) !important;
+}
