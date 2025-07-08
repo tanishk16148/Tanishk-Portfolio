@@ -15,6 +15,8 @@ const Contact = () => {
     message: ''
   });
 
+  
+
   const handleChange = (e) => {
     setFormData(prev => ({
       ...prev,
@@ -71,6 +73,31 @@ const Contact = () => {
       });
   };
 
+  // ✅ Resume Toast Function
+  const showResumeToast = () => {
+    toast.info(
+      <div>
+        <p><strong>📄 My Resume</strong></p>
+        <a
+          href="https://your-resume-link.com/resume.pdf" // Replace with your actual resume link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume-link"
+        >
+          📥Download Resume
+        </a>
+      </div>,
+      {
+        position: 'top-right',
+        autoClose: false,
+        closeOnClick: false,
+        draggable: false,
+        closeButton: true,
+        className: 'custom-toast resume-toast',
+      }
+    );
+  };
+
   return (
     <section className="contact-section">
       <h2 className="contact-title">Let's Connect 📬</h2>
@@ -83,6 +110,7 @@ const Contact = () => {
         <div className="contact-links">
           <a href="https://github.com/tanishk16148" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/l-b-tanishk-abinav-79a802279/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a onClick={showResumeToast} target="_blank" rel="noopener noreferrer">Resume</a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanishk16148@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a>
         </div>
         <button className="contact-open-btn" onClick={() => setModalOpen(true)}>Contact Me</button>

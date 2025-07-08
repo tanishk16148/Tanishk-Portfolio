@@ -44,6 +44,7 @@
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .contact-links a:hover {
@@ -187,6 +188,45 @@ textarea {
   color: var(--accent-color, #64ffda) !important;
   border-radius: 8px !important;
 }
+
+/* resume toast */
+.resume-toast {
+  font-size: 1rem;
+  background: #121212 !important;
+  color: var(--accent-color, #64ffda) !important;
+  border-left: 4px solid var(--accent-color, #64ffda);
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.App.light .resume-toast {
+  background: #fff !important;
+  color: var(--accent-color, #0077ff) !important;
+}
+
+.resume-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent-color, #64ffda);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.App.light .resume-link {
+  color: var(--accent-color, #0077ff);
+}
+
+/* Fix close button visibility in dark mode */
+.Toastify__close-button {
+  color: var(--accent-color, #64ffda) !important;
+  opacity: 1 !important;
+}
+
+.App.light .Toastify__close-button {
+  color: var(--accent-color, #0077ff) !important;
+}
+
+
 
 /* Animation */
 @keyframes fadeInUp {

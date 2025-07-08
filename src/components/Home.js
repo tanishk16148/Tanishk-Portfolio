@@ -13,7 +13,7 @@ const Home = () => {
         I’m a{' '}
         <span className="typewriter-text">
           <Typewriter
-            words={['Developer', 'Designer', 'UI/UX Designer']}
+            words={['FullStack Developer', 'Web Designer', 'UI/UX Designer']}
             loop={true}
             cursor
             cursorStyle="|"
