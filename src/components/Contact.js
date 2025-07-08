@@ -77,14 +77,15 @@ const Contact = () => {
   const showResumeToast = () => {
     toast.info(
       <div>
-        <p><strong>📄 My Resume</strong></p>
+        <p><strong>📜 My Resume</strong></p>
         <a
-          href="https://your-resume-link.com/resume.pdf" // Replace with your actual resume link
+          href="/Resume.pdf" 
+          download="TanishkAbinav's_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="resume-link"
         >
-          📥Download Resume
+          📩Download Resume
         </a>
       </div>,
       {
